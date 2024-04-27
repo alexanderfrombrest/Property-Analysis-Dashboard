@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-14 22:42:10.640289
+  name: project_pipeline_trigger
+  pipeline_uuid: project_pipeline
+  schedule_interval: 0 */6 * * *
+  schedule_type: time
+  settings: null
+  sla: null
+  start_time: 2024-04-15 01:00:00
+  status: active
+  variables: {}

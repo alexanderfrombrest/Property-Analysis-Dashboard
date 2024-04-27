@@ -1,0 +1,112 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/project_scrap.py
+  downstream_blocks:
+  - project_transform
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: project_scrap
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: project_scrap
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/project_transform.py
+  downstream_blocks:
+  - project_to_datalake
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: project_transform
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - project_scrap
+  uuid: project_transform
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/project_to_datalake.py
+  downstream_blocks:
+  - write_to_bigquery
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: project_to_datalake
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - project_transform
+  uuid: project_to_datalake
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    data_provider: bigquery
+    data_provider_database: ''
+    data_provider_profile: default
+    data_provider_schema: property_analysis_dashboard
+    data_provider_table: property_data
+    dbt: {}
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_source:
+      path: data_exporters/write_to_bigquery.sql
+    limit: 1000
+    upstream_block_configuration:
+      project_to_datalake:
+        table_name: ''
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: sql
+  name: write_to_bigquery
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - project_to_datalake
+  uuid: write_to_bigquery
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: null
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: project_pipeline
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: project_pipeline
+variables_dir: /home/src/mage_data/Property-Analysis-Dashboard
+widgets: []
