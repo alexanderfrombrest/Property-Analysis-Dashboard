@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: silent-blade-412220
+    schema: project
+
+    tables:
+      - name: property_data
