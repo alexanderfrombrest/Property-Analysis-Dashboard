@@ -3,7 +3,7 @@
 ## Important!
 *Dear Peer Reviewer,
 I have been making improvements on my project and accidentally force pushed new repo to main instead of master on 27/04/2024 so initial commit made on 21/04/2024 disappeared...
-I am extremelly sorry for that and hope for your forbearance. Maybe you managed to review it before 27/04 :)*
+I am extremelly sorry for that and hope for your forbearance. I hope that managed to review the project before 27/04 :)*
 
 ### Objective:
 Creation of end-to-end batch data pipeline and a dashboard for analysis of Polish real estate market based on https://www.otodom.pl/.
