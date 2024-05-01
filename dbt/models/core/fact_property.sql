@@ -12,7 +12,7 @@ with otodom_property as (
 ) 
 
 select
-    otodom_property.link as id,
+    otodom_property.id,
     MIN(DATE(otodom_property.added_date)) as added_date,
     MAX(DATE(otodom_property.update_date)) as latest_update_date,
     MIN(otodom_property.price) as initial_price, 
@@ -21,20 +21,23 @@ select
     AVG(otodom_property.area) as area,
     AVG(otodom_property.price_per_m2) as average_price_per_m2,
     MAX(otodom_property.price_per_m2) as max_price_per_m2,
-    MAX(heating) as heating,
-    MAX(form_of_ownership) as form_of_ownership,
-    MAX(condition) as condition,
-    MAX(arrangements) as arrangements,
-    MAX(elevator) as elevator_available
+    MAX(otodom_property.heating) as heating,
+    MAX(otodom_property.form_of_ownership) as form_of_ownership,
+    MAX(otodom_property.condition) as condition,
+    MAX(otodom_property.arrangements) as arrangements,
+    MAX(otodom_property.elevator) as elevator_available,
+    MAX(otodom_property.voivodeship) as voivodeship,
+    MAX(otodom_property.city) as city,
+    MAX(otodom_property.district) as district,
+    MAX(otodom_property.subdistrict) as subdistrict,
+    MAX(otodom_property.link) as link
     
 
 from otodom_property
 where 
     id > 0 AND
     price_per_m2 > 0 AND    
-    price_per_m2 < 30000 AND
-    condition <> "0" AND condition <> "do remontu" AND
-    form_of_ownership <> "0"
-group by otodom_property.link
-order by condition asc
+    price_per_m2 < 50000 AND
+    area > 10
+group by otodom_property.id
 
