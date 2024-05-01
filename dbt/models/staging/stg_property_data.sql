@@ -26,6 +26,10 @@ with
             elevator,
             material2,
             link,
+            voivodeship,
+            city,
+            district,
+            subdistrict,
             price_per_m2
 
         from source
