@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: staging
-    database: silent-blade-412220
-    schema: project
+    database: master-magnet-421010
+    schema: property_analysis_dashboard
 
     tables:
       - name: property_data
