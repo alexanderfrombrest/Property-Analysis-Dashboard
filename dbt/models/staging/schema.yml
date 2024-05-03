@@ -7,3 +7,4 @@ sources:
 
     tables:
       - name: property_data
+      - name: property_data_daily
