@@ -28,7 +28,7 @@ Visualization: Looker Studio
 
 ### Final result:  
 
-https://lookerstudio.google.com/reporting/179c258a-7d7b-409e-8c25-171aa4f2edb4
+https://lookerstudio.google.com/s/hyJsuxC75RI
 
 Pie chart shows the distribution of ownership data, with "full ownership" being most popular category in offers.
 Column chart shows the distribution of the price per square meter for primary and secondary markets over time.
