@@ -36,5 +36,8 @@ Column chart shows the distribution of the price per square meter for primary an
 ![image](https://github.com/alexanderfrombrest/Property-Analysis-Dashboard/assets/64230396/30126a97-8504-45aa-a76f-a0982d6532d9)
 
 
-
+Further development:
+1. Count of sold flats and average sell time for offer
+2. Chart weekly count and median price for offers at different subdiscticts
+3. Highlight the rows which where recently added or updated
 
