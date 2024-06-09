@@ -5,8 +5,8 @@ with
     renamed as (
 
         select
-            current_date as download_date,
-            current_time as download_time,
+            `current_date` as download_date,
+            `current_time` as download_time,
             id,
             added_date,
             update_date,
