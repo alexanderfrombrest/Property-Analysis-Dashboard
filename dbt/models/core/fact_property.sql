@@ -19,7 +19,7 @@ select
     MAX(otodom_property.price) as latest_price,
     MAX(otodom_property.price)- MIN(otodom_property.price) as price_change,
     AVG(otodom_property.area) as area,
-    max(otodom_property_recent.building_year) as building_year,
+    max(otodom_property.building_year) as building_year,
     AVG(otodom_property.price_per_m2) as average_price_per_m2,
     MAX(otodom_property.price_per_m2) as max_price_per_m2,
     MAX(otodom_property.heating) as heating,
