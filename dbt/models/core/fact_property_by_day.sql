@@ -7,7 +7,7 @@ with
 
 select
     otodom_property.id,
-    date(otodom_property.download_date) as download_date,
+    otodom_property.download_date as download_date,
     max(date(otodom_property.update_date)) as latest_update_date,
     min(otodom_property.price) as initial_price,
     max(otodom_property.price) as latest_price,
